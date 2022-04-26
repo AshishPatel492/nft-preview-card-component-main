@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Verydarkbluemain: hsl(217, 54%, 11%);
+  --Verydarkbluecard: hsl(216, 50%, 16%);
+  --Verydarkblueline: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--Verydarkbluemain);
+  /* width: 1440px; */
+  box-sizing: border-box;
+}
+main.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main.container .card {
+  width: 356px;
+  height: 599px;
+  display: flex;
+  flex-direction: column;
+  background: var(--Verydarkbluecard);
+  border-radius: 20px;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+}
+main.container .card .card_img_con {
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+}
+main.container .card .card_img_con .card_img {
+  height: 304px;
+  width: 303px;
+  margin: 25px;
+  border-radius: 20px;
+}
+main.container .card .card_img_con .img_hover {
+  background-color: #00fff7;
+  border-radius: 12px;
+  bottom: 0;
+  height: 304px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s;
+  width: 303px;
+  margin: 25px;
+}
+main.container .card .card_img_con:hover .img_hover {
+  opacity: 0.3;
+}
+main.container .card .card_img_con:hover .card_img_hover {
+  opacity: 1;
+}
+main.container .card .card_img_con .card_img_hover {
+  left: 42.5%;
+  opacity: 0;
+  position: absolute;
+  top: 42.5%;
+}
+main.container .card .text {
+  padding: 25px;
+  padding-top: 0;
+}
+main.container .card .text h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--White);
+}
+main.container .card .text h2:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+main.container .card .text p {
+  font-size: 18px;
+  color: var(--Softblue);
+  font-weight: 300;
+}
+main.container .card .prise_time {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  padding-top: 0px;
+  /* padding-bottom: 15px; */
+}
+main.container .card .prise_time div {
+  display: flex;
+}
+main.container .card .prise_time h3 {
+  padding-left: 5px;
+  color: var(--Softblue);
+}
+main.container .card .prise_time div .left:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+main.container .card hr {
+  border: 1px solid var(--Verydarkblueline);
+}
+footer.footer_img {
+  display: flex;
+  align-items: center;
+}
+footer.footer_img img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin: 12px 12px 0px 25px;
+}
+footer.footer_img h3 {
+  font-size: 18px;
+  color: var(--White);
+  font-weight: 300;
+  margin: 15px 0 0 0;
+}
+footer.footer_img h3 span.tag {
+  font-size: 18px;
+  color: var(--Softblue);
+  font-weight: 300;
+}
+footer.footer_img h3 span.name:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
